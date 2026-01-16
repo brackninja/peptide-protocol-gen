@@ -1,0 +1,88 @@
+/* New Styles for Expanded Info */
+.grid-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.detail-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.detail-item .label {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.25rem;
+}
+
+.detail-item .value {
+    font-weight: 500;
+    color: var(--text-main);
+    font-size: 0.95rem;
+}
+
+.info-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border-top: 1px solid var(--border);
+    padding-top: 1rem;
+}
+
+.info-block {
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.info-label {
+    display: block;
+    font-weight: 600;
+    color: var(--primary);
+    margin-bottom: 0.25rem;
+    font-size: 0.85rem;
+}
+
+.info-block.mechanism .info-label {
+    color: #60a5fa;
+}
+
+/* Blue for mech */
+.info-block.synergy .info-label {
+    color: #fbbf24;
+}
+
+/* Amber for synergy */
+.info-block.outcome .info-label {
+    color: #34d399;
+}
+
+/* Green for outcome */
+
+.info-block p {
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+.peptide-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.peptide-tag {
+    font-size: 0.7rem;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    color: var(--text-secondary);
+    color: var(--text-secondary);
+    max-width: 100%;
+}
