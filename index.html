@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dr. Seeds Peptide Protocols</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="custom.css">
+  <link rel="stylesheet" href="info-cards.css">
+</head>
+
+<body>
+  <div class="background-glow"></div>
+
+  <main class="container">
+    <header class="app-header">
+      <div class="logo-container">
+        <svg class="icon-dna" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4 22C4 22 5.5 21 7 19.5C8.5 18 10 16 11.5 13.5L13.5 15.5C11 17 9 18.5 7.5 20C6 21.5 5 23 5 23"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M20 2C20 2 18.5 3 17 4.5C15.5 6 14 8 12.5 10.5L10.5 8.5C13 7 15 5.5 16.5 4C18 2.5 19 1 19 1"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M10.5 8.5L4.5 14.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" />
+          <path d="M19.5 9.5L13.5 15.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" />
+        </svg>
+        <div class="brand-text">
+          <h1>Protocol<span class="highlight">Gen</span></h1>
+          <p class="subtitle">Based on Dr. William Seeds</p>
+        </div>
+      </div>
+    </header>
+
+    <section class="input-section">
+      <div class="card input-card">
+        <h2>Identify Your Goal</h2>
+        <p class="instruction">Select the primary health concern or optimization goal to generate a targeted peptide
+          protocol.</p>
+
+        <!-- Mode Switcher -->
+        <div class="mode-switch-container">
+          <label class="mode-option">
+            <input type="radio" name="search-mode" value="goal" checked>
+            <span>Search by Goal</span>
+          </label>
+          <label class="mode-option">
+            <input type="radio" name="search-mode" value="peptide">
+            <span>Lookup Peptide</span>
+          </label>
+        </div>
+
+        <!-- Goal Search Container -->
+        <div id="goal-search-container" class="search-container">
+          <div class="select-wrapper">
+            <select id="ailment-select">
+              <option value="" disabled selected>Select your goal...</option>
+              <option value="injury">🩹 Injury & Tissue Repair</option>
+              <option value="anti_aging">⏳ Anti-Aging & Longevity</option>
+              <option value="fat_loss">🔥 Fat Loss & Metabolism</option>
+              <option value="immunity">🛡️ Immune System Modulation</option>
+              <option value="cognition">🧠 Cognitive Enhancement</option>
+              <option value="sleep">🌙 Sleep Optimization</option>
+              <option value="tanning">☀️ Tanning & UV Protection</option>
+              <option value="gut_health">🦠 Gut Health & SIBO</option>
+              <option value="pain">⚡ Neuropathy & Chronic Pain</option>
+              <option value="sexual_health">❤️ Sexual Health & Libido</option>
+              <option value="hair_growth">💆 Hair Restoration</option>
+              <option value="mitochondrial">⚡ Mitochondrial Health & Endurance</option>
+              <option value="custom">✨ Other / Custom Goal</option>
+            </select>
+            <div class="select-arrow">▼</div>
+          </div>
+          <input type="text" id="custom-input" class="custom-input hidden"
+            placeholder="e.g. Tendonitis, Brain Fog, Lyme Disease...">
+        </div>
+
+        <!-- Peptide Search Container -->
+        <div id="peptide-search-container" class="search-container hidden">
+          <div class="input-wrapper" style="position: relative;">
+            <input type="text" id="peptide-input" class="custom-input" style="margin-top:0;" list="peptide-list"
+              placeholder="Start typing a peptide name (e.g. BPC-157)...">
+            <datalist id="peptide-list">
+              <!-- Populated via JS -->
+            </datalist>
+          </div>
+        </div>
+
+        <button id="generate-btn" class="btn-primary" disabled>
+          Generate Protocol
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </button>
+      </div>
+    </section>
+
+    <section id="results-section" class="results-section hidden">
+      <!-- Content injected by JS -->
+    </section>
+
+    <footer class="legal-disclaimer">
+      <p>⚠️ <strong>Disclaimer:</strong> This tool is for educational purposes only and is based on the published works
+        of Dr. William Seeds. It does not constitute medical advice, diagnosis, or treatment. Always consult with a
+        qualified healthcare provider before using peptides.</p>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
